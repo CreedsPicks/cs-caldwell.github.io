@@ -1,0 +1,167 @@
+/* css/styles.css */
+html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Apple's native font stack */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--caldwell-white);
+    color: var(--caldwell-black);
+    overflow-x: hidden;
+}
+
+/* Apple-style Blur Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: saturate(180%) blur(20px); /* Seamless Apple frosted glass effect */
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar .logo {
+    color: var(--caldwell-white);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--apple-light-bg);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--caldwell-gold);
+}
+
+/* Parallax Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Parallax effect achieved with fixed background attachment */
+    background: linear-gradient(rgba(200, 16, 46, 0.85), rgba(0, 0, 0, 0.9)), 
+                url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--caldwell-white);
+}
+
+.hero h1 {
+    font-size: 6rem;
+    margin-bottom: 0;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--caldwell-gold);
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Content Sections */
+.section {
+    padding: 120px 20px;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dark-bg {
+    background-color: var(--caldwell-black);
+    color: var(--caldwell-white);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    letter-spacing: -0.04em;
+}
+
+.section p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--apple-gray-text);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Achievement Cards Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.card {
+    background: var(--apple-dark-bg);
+    padding: 50px 30px;
+    border-radius: 24px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+}
+
+.card h3 {
+    color: var(--caldwell-white);
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.card .highlight {
+    color: var(--caldwell-gold);
+    font-weight: bold;
+}
+
+/* Scroll-Driven Animation Classes */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); /* Apple's signature smooth easing */
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-up {
+    animation: fadeInUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

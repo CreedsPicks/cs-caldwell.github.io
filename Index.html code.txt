@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caldwell University | Computer Science & Information Systems</title>
+    <!-- Linking our organized CSS files -->
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Seamless Apple-style Navigation -->
+    <nav class="navbar">
+        <div class="logo">Caldwell CS & IT</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+        </ul>
+    </nav>
+
+    <!-- Parallax Hero Section -->
+    <header class="hero">
+        <div class="hero-content fade-in-up">
+            <h1>Code the Future.</h1>
+            <p>School of Business and Computer Science</p>
+        </div>
+    </header>
+
+    <!-- About Section with Scroll Animation -->
+    <section id="about" class="section">
+        <div class="container scroll-reveal">
+            <h2>Empowering Innovators.</h2>
+            <p>At Caldwell University, we bridge the gap between business acumen and deep technical expertise. Our programs forge the next generation of software engineers, cybersecurity experts, and data scientists ready to shape tomorrow's technology.</p>
+        </div>
+    </section>
+
+    <!-- Achievements Section (Dark Mode for contrast) -->
+    <section id="achievements" class="section dark-bg">
+        <div class="container scroll-reveal">
+            <h2>Excellence, Proven.</h2>
+            <p>We don't just participate. We lead.</p>
+            
+            <div class="grid">
+                <div class="card scroll-reveal">
+                    <h3>David vs. Goliath</h3>
+                    <p>Caldwell CS students consistently dominate regional hacking and coding competitions, taking home top prizes and <span class="highlight">outperforming top Ivy League programs.</span></p>
+                </div>
+                <div class="card scroll-reveal">
+                    <h3>Elite Faculty</h3>
+                    <p>Learn directly from industry veterans dedicated to cutting-edge research, personalized mentorship, and ensuring student success in the tech workforce.</p>
+                </div>
+                <div class="card scroll-reveal">
+                    <h3>Career Ready</h3>
+                    <p>Our curriculum is dynamically updated to match industry standards, ensuring graduates land roles at Fortune 500 tech companies immediately upon graduation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Linking our App JS logic -->
+    <script src="js/app.js"></script>
+</body>
+</html>
